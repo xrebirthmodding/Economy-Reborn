@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Attempt at Patching Trade AI for Galaxy instead of Cluster -->
+<replace sel="aiscript/attention/actions/do_else/do_if[@value='this.ship.isclass.ship_l or this.ship.isclass.ship_xl']/set_value[@name='$range']/@range"> 
+         <$range = this.ship.galaxy/>
+   </replace>
+
+</diff>
