@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-<!-- Attempt at Patching Trade AI for Galaxy instead of Cluster -->
-<replace sel="aiscript/attention/actions/do_else/do_if[@value='this.ship.isclass.ship_l or this.ship.isclass.ship_xl']/set_value[@name='$range']/@exact">player.galaxy
-   </replace>
-
-<!-- DEBUG: 1) you addressed the wrong Attribute -- there is no "range" attribute there, just one called "exact" 
-2) you tried to write an incorrect Value there, so it would thave looked like 
-<set_value name="$range" exact="<range = this.ship.galaxy/>" /> if 1 were correct (i think the Game wouldnt apply this because its breaking the syntax) Should be fixed now -->
-
-         
+	<replace sel="aiscript/attention/actions/do_else/do_if[@value='this.ship.isclass.ship_l or this.ship.isclass.ship_xl']/set_value[@name='$range']/@exact">player.galaxy</replace>
 </diff>
