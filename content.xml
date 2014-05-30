@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<content id="ws_263409115" name="Trader Fix" description="This extension is an attempt to fix the on going and seeming ignored issues with the economy in X Rebirth by making the AI trade across gate instead of their clusters only. " author="Flying Space Drunks mod team" version="0.1" save="true" date="2014-05-30">
+  <text language="44" name="Trader Fix" description="Attempts to fix the non-Galactic Trader issue" author="flying Space Drunks mod team">
+</content>
