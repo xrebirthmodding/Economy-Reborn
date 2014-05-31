@@ -48,7 +48,7 @@
           <set_value name="$range" exact="this.ship.cluster" />
         </do_if>
         <do_else>
-          <set_value name="$range" exact="this.ship.galaxy" />
+          <set_value name="$range" exact="this.ship.sector" />
 		</do_else>
       </do_else>
 
