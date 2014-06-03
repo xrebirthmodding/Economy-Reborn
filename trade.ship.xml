@@ -33,23 +33,23 @@
       </run_script>
 
       <!-- TODO: we should check for things like broken jump drive, so we can go in for repairs instead of endlessly trying to jump to a trade -->
-      
-      <do_if value="this.ship.isclass.ship_l or this.ship.isclass.ship_xl">
-	<set_value name="$range" exact="this.ship.cluster" />
+
+      <do_if value="$range" exact="'zone'">
+        <set_value name="$range" exact="this.ship.zone" />
       </do_if>
+      <do_elseif value="$range" exact="'sector'">
+        <set_value name="$range" exact="this.ship.sector" />
+      </do_elseif>
+      <do_elseif value="$range" exact="'cluster'">
+        <set_value name="$range" exact="trade.ship.cluster" />
+      </do_elseif>
       <do_else>
-       <do_if value="$range" exact="'zone'">
-	<set_value name="$range" exact="this.ship.zone" />
-       </do_if>
-       <do_elseif value="$range" exact="'sector'">
-	<set_value name="$range" exact="this.ship.sector" />
-       </do_elseif>
-       <do_elseif value="$range" exact="'cluster'">
-	<set_value name="$range" exact="this.ship.cluster" />
-       </do_elseif>
-       <do_else>
-	<set_value name="$range" exact="this.ship.galaxy" />
-       </do_else>
+        <do_if value="this.ship.isclass.ship_l or this.ship.isclass.ship_xl">
+          <set_value name="$range" exact="player.galaxy" />
+        </do_if>
+        <do_else>
+          <set_value name="$range" exact="player.galaxy" />
+		</do_else>
       </do_else>
 
       <do_if value="this.ship.defencenpc != null">
